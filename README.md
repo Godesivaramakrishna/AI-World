@@ -258,6 +258,8 @@ curl -X POST http://localhost:8000/ai/chat \
 
 This repository is best deployed as two services: one for the backend and one for the frontend.
 
+Important: do not deploy from the repository root as a single Railway service. The root directory does not contain a deployable app because this is a monorepo. Railway must be pointed at the correct app folder for each service.
+
 ### Backend on Railway
 
 Recommended settings:
@@ -287,6 +289,24 @@ Required variable:
 ```env
 NEXT_PUBLIC_API_URL=https://your-backend-service.up.railway.app
 ```
+
+### Fixing Railpack Detection Errors
+
+If Railway shows an error like "Railpack could not determine how to build the app", the service is probably using the repository root.
+
+Set the Railway service root directory based on what the service should run:
+
+| Railway service | Root directory | Why |
+| --- | --- | --- |
+| Backend API | `backend` | Contains `requirements.txt`, `main.py`, and `backend/railway.toml` |
+| Frontend web app | `ai-universe` | Contains `package.json`, Next.js source, and `ai-universe/railway.toml` |
+
+Each app needs its own Railway service:
+
+1. Create a Railway service for the backend and set the root directory to `backend`.
+2. Create a Railway service for the frontend and set the root directory to `ai-universe`.
+3. Deploy the backend first and copy its public URL.
+4. Set `NEXT_PUBLIC_API_URL` in the frontend service to the backend URL.
 
 ## Production Notes
 
