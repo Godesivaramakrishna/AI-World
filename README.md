@@ -1,8 +1,19 @@
 # AI World
 
+> A full-stack AI discovery platform for exploring, comparing, and learning about modern AI tools.
+
 AI World is a full-stack AI discovery and comparison platform. It helps users explore AI tools, compare options side by side, review category trends, and get AI-powered recommendations through a Groq-backed assistant.
 
-The project is organized as a Next.js frontend and a FastAPI backend, making it straightforward to run locally, deploy as separate services, and extend over time.
+The project is organized as a modern web application with a cinematic Next.js dashboard, a FastAPI REST API, SQLite-backed persistence, JWT authentication, and an AI assistant layer powered by Groq.
+
+## Highlights
+
+- Full-stack architecture with separate frontend and backend services.
+- Dashboard-first user experience for exploring, comparing, and chatting about AI tools.
+- Backend-seeded AI tool catalog with category and comparison endpoints.
+- JWT authentication with password hashing.
+- Groq-powered assistant for AI tool recommendations.
+- Railway-friendly structure for frontend and backend deployment.
 
 ## Features
 
@@ -12,6 +23,71 @@ The project is organized as a Next.js frontend and a FastAPI backend, making it 
 - Sign up and log in with JWT-based authentication.
 - Chat with an AI assistant powered by Groq when `GROQ_API_KEY` is configured.
 - Enjoy a polished frontend experience built with animations, custom visuals, charts, and responsive dashboard pages.
+
+## Architecture
+
+AI World uses a decoupled client-server architecture. The frontend is responsible for the interactive dashboard, routing, visualization, and local token handling. The backend owns data access, authentication, AI chat orchestration, and database seeding.
+
+```mermaid
+flowchart TD
+    User["User"] --> Browser["Browser"]
+
+    subgraph Frontend["Frontend: ai-universe"]
+        Browser --> NextApp["Next.js App Router"]
+        NextApp --> Dashboard["Dashboard Pages"]
+        Dashboard --> Explore["Explore AI Tools"]
+        Dashboard --> Compare["Compare Tools"]
+        Dashboard --> ChatUI["AI Chat UI"]
+        NextApp --> AuthClient["Auth Helpers"]
+        AuthClient --> LocalStorage["Local Storage JWT"]
+    end
+
+    subgraph Backend["Backend: FastAPI"]
+        API["FastAPI Application"]
+        AuthAPI["/auth/signup and /auth/login"]
+        ToolAPI["/tools, /categories, /tools/compare"]
+        ChatAPI["/ai/chat"]
+        API --> AuthAPI
+        API --> ToolAPI
+        API --> ChatAPI
+    end
+
+    subgraph DataLayer["Data Layer"]
+        SQLAlchemy["SQLAlchemy ORM"]
+        SQLite["SQLite Database"]
+        SeedData["tools_data.py Seed Catalog"]
+        SQLAlchemy --> SQLite
+        SeedData --> SQLAlchemy
+    end
+
+    subgraph ExternalAI["External AI Service"]
+        Groq["Groq API"]
+    end
+
+    NextApp -->|REST requests with NEXT_PUBLIC_API_URL| API
+    AuthAPI -->|hash and verify passwords| SQLAlchemy
+    ToolAPI -->|query tools and categories| SQLAlchemy
+    ChatAPI -->|prompt with user message| Groq
+    Groq -->|assistant response| ChatAPI
+    API -->|JSON responses| NextApp
+```
+
+### Request Flow
+
+1. The user interacts with the Next.js dashboard in `ai-universe/`.
+2. The frontend sends REST requests to the FastAPI backend using `NEXT_PUBLIC_API_URL`.
+3. Authentication routes create JWTs and the frontend stores them in local storage.
+4. Tool browsing and comparison routes read seeded tool data from SQLite through SQLAlchemy.
+5. Chat requests are routed through FastAPI to Groq and returned to the chat interface.
+
+### System Boundaries
+
+| Layer | Responsibility |
+| --- | --- |
+| Frontend | Dashboard UI, routing, animations, charts, token storage, API calls |
+| Backend | REST endpoints, authentication, database access, Groq chat orchestration |
+| Database | Users and AI tool catalog persisted through SQLAlchemy models |
+| External Service | Groq model inference for assistant responses |
 
 ## Tech Stack
 
@@ -38,6 +114,19 @@ The project is organized as a Next.js frontend and a FastAPI backend, making it 
 - bcrypt
 - Groq SDK
 - python-dotenv
+
+## Core Modules
+
+| Path | Purpose |
+| --- | --- |
+| `ai-universe/app/` | Next.js App Router pages, layouts, and dashboard routes |
+| `ai-universe/components/` | Visual components, navigation, cursor effects, and landing sections |
+| `ai-universe/utils/api.ts` | Frontend API base URL, JWT helpers, and authenticated fetch wrapper |
+| `backend/main.py` | FastAPI app setup, CORS, router registration, tool endpoints, and database seeding |
+| `backend/auth.py` | Signup, login, bcrypt password hashing, and JWT creation |
+| `backend/groq_service.py` | AI assistant route backed by Groq |
+| `backend/database.py` | SQLAlchemy engine, session, and database configuration |
+| `backend/tools_data.py` | Seed catalog for AI tools |
 
 ## Repository Structure
 
