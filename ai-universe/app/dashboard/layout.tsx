@@ -9,7 +9,7 @@ const MAIN_NAV = [
   { name: 'Home', path: '/dashboard', icon: '🏠' },
   { name: 'Explore AI', path: '/dashboard/explore', icon: '🤖' },
   { name: 'Categories', path: '/dashboard/categories', icon: '📂' },
-  { name: 'Compare', path: '/dashboard/compare', icon: '⚖️' },
+  { name: 'Category Compare', path: '/dashboard/compare', icon: '⚖️' },
   { name: 'Chat With AI', path: '/dashboard/chat', icon: '💬' },
   { name: 'Trending AI Tools', path: '/dashboard/trending', icon: '📈' },
 ];
@@ -35,7 +35,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     }
   }, [router]);
 
-  const handleLogout = () => {
+  const handleLogout = (e: any) => {
+    e.preventDefault();
     clearAuthToken();
     router.push('/');
   };
@@ -118,7 +119,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           
           <div style={{ marginTop: 'auto', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 10 }}>
             <NavItem item={{ name: 'Profile', path: '/dashboard/profile', icon: '👤' }} />
-            <NavItem item={{ name: 'Logout', path: '#', icon: '🚪' }} isLogout onClick={handleLogout} />
+            <NavItem item={{ name: 'Logout', path: '#', icon: '⏻' }} isLogout onClick={handleLogout} />
           </div>
         </aside>
 
