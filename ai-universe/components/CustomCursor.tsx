@@ -10,6 +10,8 @@ export default function CustomCursor() {
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
+    const cursorDot = dot;
+    const cursorRing = ring;
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -20,8 +22,8 @@ export default function CustomCursor() {
     const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      dot.style.left = mouseX + 'px';
-      dot.style.top = mouseY + 'px';
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
     };
 
     document.addEventListener('mousemove', onMouseMove);
@@ -29,8 +31,8 @@ export default function CustomCursor() {
     function animateRing() {
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
-      ring.style.left = ringX + 'px';
-      ring.style.top = ringY + 'px';
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
       animationFrameId = requestAnimationFrame(animateRing);
     }
     animateRing();
@@ -46,24 +48,20 @@ export default function CustomCursor() {
         htmlEl.dataset.cursorBound = 'true';
 
         el.addEventListener('mouseenter', () => {
-          if (dot && ring) {
-            dot.style.width = '10px';
-            dot.style.height = '10px';
-            ring.style.width = '50px';
-            ring.style.height = '50px';
-            ring.style.borderColor = 'rgba(255,45,45,1)';
-            ring.style.backgroundColor = 'rgba(255,45,45,0.06)';
-          }
+          cursorDot.style.width = '10px';
+          cursorDot.style.height = '10px';
+          cursorRing.style.width = '50px';
+          cursorRing.style.height = '50px';
+          cursorRing.style.borderColor = 'rgba(255,45,45,1)';
+          cursorRing.style.backgroundColor = 'rgba(255,45,45,0.06)';
         });
         el.addEventListener('mouseleave', () => {
-          if (dot && ring) {
-            dot.style.width = '6px';
-            dot.style.height = '6px';
-            ring.style.width = '36px';
-            ring.style.height = '36px';
-            ring.style.borderColor = 'rgba(255,45,45,0.7)';
-            ring.style.backgroundColor = 'transparent';
-          }
+          cursorDot.style.width = '6px';
+          cursorDot.style.height = '6px';
+          cursorRing.style.width = '36px';
+          cursorRing.style.height = '36px';
+          cursorRing.style.borderColor = 'rgba(255,45,45,0.7)';
+          cursorRing.style.backgroundColor = 'transparent';
         });
       });
     };
@@ -73,21 +71,21 @@ export default function CustomCursor() {
     observer.observe(document.body, { childList: true, subtree: true });
 
     const onMouseDown = () => {
-      if (dot) dot.style.transform = 'translate(-50%,-50%) scale(0.7)';
-      if (ring) ring.style.transform = 'translate(-50%,-50%) scale(0.85)';
+      cursorDot.style.transform = 'translate(-50%,-50%) scale(0.7)';
+      cursorRing.style.transform = 'translate(-50%,-50%) scale(0.85)';
     };
     const onMouseUp = () => {
-      if (dot) dot.style.transform = 'translate(-50%,-50%) scale(1)';
-      if (ring) ring.style.transform = 'translate(-50%,-50%) scale(1)';
+      cursorDot.style.transform = 'translate(-50%,-50%) scale(1)';
+      cursorRing.style.transform = 'translate(-50%,-50%) scale(1)';
     };
 
     const onMouseLeave = () => {
-      if (dot) dot.style.opacity = '0';
-      if (ring) ring.style.opacity = '0';
+      cursorDot.style.opacity = '0';
+      cursorRing.style.opacity = '0';
     };
     const onMouseEnter = () => {
-      if (dot) dot.style.opacity = '1';
-      if (ring) ring.style.opacity = '1';
+      cursorDot.style.opacity = '1';
+      cursorRing.style.opacity = '1';
     };
 
     document.addEventListener('mousedown', onMouseDown);

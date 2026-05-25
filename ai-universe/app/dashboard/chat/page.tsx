@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { fetchWithAuth } from '../../../utils/api';
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -17,7 +18,7 @@ const SUGGESTED_PROMPTS = [
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: 'Hello! I am your AI Universe Assistant. I can help you discover, compare, and choose the best AI tools for your specific needs. What are you looking for today?' }
+    { role: 'assistant', content: 'Hello! I am your AI Universe Assistant. I can help you discover, compare, and choose the best AI tools for your specific needs.\n\n**Example questions you can ask:**\n* What is the best free coding AI?\n* Compare Claude and GPT-4\n* Suggest automation tools for marketing' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -53,7 +54,7 @@ export default function ChatPage() {
       }
     } catch (err) {
       console.error(err);
-      setMessages(prev => [...prev, { role: 'assistant', content: 'Network error. Backend might be down.' }]);
+      setMessages(prev => [...prev, { role: 'assistant', content: 'Network error.' }]);
     } finally {
       setLoading(false);
     }
@@ -63,7 +64,7 @@ export default function ChatPage() {
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <div style={{ marginBottom: 20 }}>
         <h1 style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 28, color: 'white', margin: '0 0 8px 0' }}>Smart AI Assistant</h1>
-        <p style={{ color: 'rgba(255,255,255,0.5)', margin: 0, fontFamily: "'Inter',sans-serif" }}>Get personalized tool recommendations and comparisons.</p>
+        <p style={{ color: 'rgba(255,255,255,0.5)', margin: 0, fontFamily: "'Inter',sans-serif" }}>Get highly optimized, point-wise tool recommendations.</p>
       </div>
 
       <div style={{
@@ -72,19 +73,28 @@ export default function ChatPage() {
         boxShadow: '0 0 40px rgba(0,0,0,0.5)'
       }}>
         {/* Chat window */}
-        <div style={{ flex: 1, padding: 24, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <div style={{ flex: 1, padding: 24, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 24 }}>
           {messages.map((msg, i) => (
             <div key={i} style={{ display: 'flex', justifyContent: msg.role === 'user' ? 'flex-end' : 'flex-start' }}>
               <div style={{
-                maxWidth: '75%', padding: '14px 18px', borderRadius: 16,
-                background: msg.role === 'user' ? '#FF2D2D' : 'rgba(255,255,255,0.05)',
-                color: 'white', fontSize: 15, lineHeight: 1.6, fontFamily: "'Inter',sans-serif",
+                maxWidth: '85%', padding: '16px 24px', borderRadius: 20,
+                background: msg.role === 'user' ? '#FF2D2D' : 'rgba(255,255,255,0.03)',
+                color: 'white', fontSize: 16, lineHeight: 1.8, fontFamily: "'Inter',sans-serif",
                 border: msg.role === 'assistant' ? '1px solid rgba(255,255,255,0.1)' : 'none',
                 boxShadow: msg.role === 'user' ? '0 0 15px rgba(255,45,45,0.3)' : 'none',
-                borderBottomRightRadius: msg.role === 'user' ? 4 : 16,
-                borderBottomLeftRadius: msg.role === 'assistant' ? 4 : 16,
+                borderBottomRightRadius: msg.role === 'user' ? 4 : 20,
+                borderBottomLeftRadius: msg.role === 'assistant' ? 4 : 20,
               }}>
-                {msg.content}
+                <ReactMarkdown
+                  components={{
+                    ul: ({node, ...props}) => <ul style={{ margin: '12px 0', paddingLeft: '24px', color: 'rgba(255,255,255,0.9)' }} {...props} />,
+                    li: ({node, ...props}) => <li style={{ marginBottom: '8px' }} {...props} />,
+                    p: ({node, ...props}) => <p style={{ margin: '8px 0' }} {...props} />,
+                    strong: ({node, ...props}) => <strong style={{ color: msg.role === 'assistant' ? '#4ade80' : 'white', fontWeight: 700 }} {...props} />,
+                  }}
+                >
+                  {msg.content}
+                </ReactMarkdown>
               </div>
             </div>
           ))}

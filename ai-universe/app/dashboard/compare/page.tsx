@@ -26,7 +26,7 @@ export default function ComparePage() {
   const [loading, setLoading] = useState(true);
   
   // Navigation State
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -70,44 +70,8 @@ export default function ComparePage() {
     }
   };
 
-  const renderCategorySelection = () => {
-    return (
-      <div>
-        <h2 style={{ fontFamily: "'Inter',sans-serif", color: 'white', marginBottom: 20 }}>Select a Category to Compare</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 20, paddingBottom: 100 }}>
-          {categories.map(cat => (
-            <div 
-              key={cat} 
-              onClick={() => setSelectedCategory(cat)}
-              style={{
-                background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: 16, padding: '24px', cursor: 'pointer',
-                display: 'flex', flexDirection: 'column', gap: 10,
-                transition: 'all 0.3s'
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,45,45,0.5)';
-                e.currentTarget.style.boxShadow = '0 0 20px rgba(255,45,45,0.15)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
-                e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <div style={{ fontSize: 32, marginBottom: 10 }}>🔮</div>
-              <h3 style={{ margin: 0, color: 'white', fontSize: 18, fontFamily: "'Inter',sans-serif" }}>{cat}</h3>
-              <p style={{ margin: 0, color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>{categoryCounts[cat]} tools available</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   const renderAZToolBrowser = () => {
-    const categoryTools = tools.filter(t => t.category === selectedCategory).sort((a, b) => a.name.localeCompare(b.name));
+    const categoryTools = [...tools].sort((a, b) => a.name.localeCompare(b.name));
     
     // Group tools by starting letter
     const groupedTools = categoryTools.reduce((acc, tool) => {
@@ -121,35 +85,43 @@ export default function ComparePage() {
 
     return (
       <div style={{ paddingBottom: 120 }}>
-        <button 
-          onClick={() => { setSelectedCategory(null); setSelectedIds([]); }} 
-          style={{ background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24, fontSize: 16, fontFamily: "'Inter',sans-serif" }}
-        >
-          ← Back to Categories
-        </button>
-        
-        <h2 style={{ fontFamily: "'Inter',sans-serif", color: 'white', marginBottom: 20 }}>Comparing in: <span style={{ color: '#FF2D2D' }}>{selectedCategory}</span></h2>
         
         {/* Alphabet Jump Bar */}
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 40, background: 'rgba(255,255,255,0.03)', padding: 16, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)' }}>
+          <button 
+            onClick={() => setSelectedLetter(null)}
+            style={{
+              background: selectedLetter === null ? '#FF2D2D' : 'transparent',
+              color: selectedLetter === null ? 'white' : 'rgba(255,255,255,0.5)',
+              border: 'none', fontSize: 14, fontWeight: 600, padding: '4px 12px',
+              borderRadius: 6, cursor: 'pointer', fontFamily: "'Inter',sans-serif"
+            }}
+          >
+            ALL
+          </button>
           {alphabet.map(letter => (
-            <a 
+            <button 
               key={letter} 
-              href={`#letter-${letter}`}
+              onClick={() => setSelectedLetter(letter)}
               style={{
-                color: groupedTools[letter] ? 'white' : 'rgba(255,255,255,0.2)',
-                textDecoration: 'none', fontSize: 14, fontWeight: 600, padding: '4px 8px',
-                pointerEvents: groupedTools[letter] ? 'auto' : 'none'
+                background: selectedLetter === letter ? '#FF2D2D' : 'transparent',
+                color: groupedTools[letter] ? (selectedLetter === letter ? 'white' : 'white') : 'rgba(255,255,255,0.2)',
+                border: 'none', fontSize: 14, fontWeight: 600, padding: '4px 8px',
+                borderRadius: 4, cursor: groupedTools[letter] ? 'pointer' : 'default',
+                pointerEvents: groupedTools[letter] ? 'auto' : 'none',
+                fontFamily: "'Inter',sans-serif"
               }}
             >
               {letter}
-            </a>
+            </button>
           ))}
         </div>
 
         {/* Tools A-Z List */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-          {Object.keys(groupedTools).sort().map(letter => (
+          {Object.keys(groupedTools).sort()
+            .filter(letter => selectedLetter === null || letter === selectedLetter)
+            .map(letter => (
             <div key={letter} id={`letter-${letter}`}>
               <h3 style={{ color: '#FF2D2D', fontSize: 24, margin: '0 0 20px 0', borderBottom: '1px solid rgba(255,45,45,0.3)', paddingBottom: 10 }}>{letter}</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
@@ -193,18 +165,18 @@ export default function ComparePage() {
       <div style={{ marginBottom: 30 }}>
         <h1 style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 28, color: 'white', margin: '0 0 8px 0' }}>AI Ecosystem Comparison</h1>
         <p style={{ color: 'rgba(255,255,255,0.5)', margin: 0, fontFamily: "'Inter',sans-serif" }}>
-          Step 1: Select a category. Step 2: Browse A-Z and select up to 3 tools. Step 3: Compare.
+          Browse A-Z and select up to 3 tools to compare their exact specifications.
         </p>
       </div>
 
       {loading ? (
         <div style={{ color: 'white' }}>Loading tools ecosystem...</div>
       ) : (
-        selectedCategory === null ? renderCategorySelection() : renderAZToolBrowser()
+        renderAZToolBrowser()
       )}
 
       {/* Sticky Bottom Compare Bar */}
-      {selectedIds.length > 0 && selectedCategory !== null && (
+      {selectedIds.length > 0 && (
         <div style={{
           position: 'fixed', bottom: 30, left: '50%', transform: 'translateX(-50%)',
           background: 'rgba(8,12,28,0.9)', backdropFilter: 'blur(10px)', border: '1px solid #FF2D2D',
@@ -214,6 +186,19 @@ export default function ComparePage() {
           <div style={{ color: 'white', fontFamily: "'Inter',sans-serif", fontSize: 16 }}>
             Selected <strong>{selectedIds.length}/3</strong> Tools
           </div>
+          <button 
+            onClick={() => { setSelectedIds([]); setSelectedLetter(null); }}
+            style={{
+              padding: '12px 24px', background: 'transparent',
+              color: 'rgba(255,255,255,0.5)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20,
+              fontWeight: 600, cursor: 'pointer', transition: 'all 0.2s',
+              fontFamily: "'Inter',sans-serif", letterSpacing: 1
+            }}
+            onMouseEnter={e => { e.currentTarget.style.color = 'white'; e.currentTarget.style.borderColor = 'white'; }}
+            onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
+          >
+            CLEAR ALL
+          </button>
           <button 
             onClick={handleCompare}
             disabled={selectedIds.length < 2}

@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
   { value: '10K+', label: 'AI TOOLS' },
-  { value: '500+', label: 'AI APIs' },
+  { value: '500+', label: 'AI APIS' },
   { value: '50+', label: 'AI CATEGORIES' },
   { value: '24/7', label: 'SMART ASSISTANT' },
 ];
@@ -112,6 +112,7 @@ export default function HeroSection() {
       style={{
         minHeight: '100vh',
         paddingTop: '72px',
+        paddingBottom: '40px',
         position: 'relative',
         overflow: 'hidden',
         display: 'flex',
@@ -153,7 +154,24 @@ export default function HeroSection() {
       }} />
 
       {/* ── Section number ── */}
-      <SectionIndicator number="01" />
+      <div style={{
+        position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', zIndex: 10,
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px'
+      }}>
+        <div style={{
+          writingMode: 'vertical-rl',
+          transform: 'rotate(180deg)',
+          color: 'rgba(255,255,255,0.2)',
+          fontSize: '12px',
+          letterSpacing: '4px',
+          fontFamily: "'Orbitron', sans-serif"
+        }}>
+          01
+        </div>
+        <div style={{
+          width: '6px', height: '6px', background: '#FF2D2D', borderRadius: '50%', boxShadow: '0 0 8px #FF2D2D'
+        }} />
+      </div>
 
       {/* ════════════════════════════════════════════
           ROBOT CANVAS — fills entire right portion,
@@ -390,21 +408,23 @@ export default function HeroSection() {
 
       {/* ── Scroll to discover ── */}
       <div style={{
-        position: 'absolute',
-        bottom: '2rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: 10,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 10,
+        position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 10,
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px'
       }}>
-        <div className="scroll-indicator">
-          <div className="mouse-icon">
-            <div className="mouse-wheel" />
-          </div>
-          <span>SCROLL TO EXPLORE</span>
+        <style>{`
+          @keyframes scrollBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+        `}</style>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', animation: 'scrollBounce 1.5s infinite' }}>
+          <svg width="20" height="30" viewBox="0 0 24 36" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <rect x="5" y="2" width="14" height="32" rx="7" />
+            <line x1="12" y1="10" x2="12" y2="14" />
+          </svg>
+          <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px', letterSpacing: '3px', fontFamily: "'Orbitron', sans-serif" }}>
+            SCROLL TO EXPLORE
+          </span>
         </div>
       </div>
     </section>

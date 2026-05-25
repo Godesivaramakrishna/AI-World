@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import AuthModals from './AuthModals';
 
-const NAV_LINKS = ['HOME', 'EXPLORE AI', 'CATEGORIES', 'COMPARE', 'CHAT WITH AI', 'ABOUT'];
+const NAV_LINKS = ['HOME', 'EXPLORE AI', 'CATEGORIES', 'COMPARE', 'APIS', 'CHAT WITH AI', 'ABOUT'];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

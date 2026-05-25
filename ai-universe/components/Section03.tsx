@@ -124,7 +124,6 @@ export default function Section03() {
           margin: '0 auto',
           position: 'relative',
           zIndex: 2,
-          alignItems: 'center',
         }}
       >
         {/* LEFT - Cube canvas */}

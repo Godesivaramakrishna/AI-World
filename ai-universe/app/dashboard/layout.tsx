@@ -8,7 +8,6 @@ import { clearAuthToken } from '../../utils/api';
 const MAIN_NAV = [
   { name: 'Home', path: '/dashboard', icon: '🏠' },
   { name: 'Explore AI', path: '/dashboard/explore', icon: '🤖' },
-  { name: 'Categories', path: '/dashboard/categories', icon: '📂' },
   { name: 'Category Compare', path: '/dashboard/compare', icon: '⚖️' },
   { name: 'Chat With AI', path: '/dashboard/chat', icon: '💬' },
   { name: 'Trending AI Tools', path: '/dashboard/trending', icon: '📈' },
