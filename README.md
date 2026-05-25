@@ -1,118 +1,213 @@
-# 🌌 AI Universe
+# AI World
 
-> **The Central Hub for Everything AI.** Discover, compare, and learn about the most advanced Artificial Intelligence platforms in the world.
+AI World is a full-stack AI discovery and comparison platform. It helps users explore AI tools, compare options side by side, review category trends, and get AI-powered recommendations through a Groq-backed assistant.
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+The project is organized as a Next.js frontend and a FastAPI backend, making it straightforward to run locally, deploy as separate services, and extend over time.
 
-AI Universe is a futuristic, full-stack intelligence ecosystem built to help users seamlessly navigate the fragmented AI market. From code generation to image synthesis, this platform serves as a visual discovery and comparison engine.
+## Features
 
----
+- Explore a curated catalog of AI tools across categories such as chat, coding, automation, productivity, image generation, video, and research.
+- Compare up to three AI tools using side-by-side data and interactive visualizations.
+- Browse category counts and trending AI tool experiences from the dashboard.
+- Sign up and log in with JWT-based authentication.
+- Chat with an AI assistant powered by Groq when `GROQ_API_KEY` is configured.
+- Enjoy a polished frontend experience built with animations, custom visuals, charts, and responsive dashboard pages.
 
-## 🚀 Key Features
-
-- **Cyberpunk UI/UX**: An immersive dark mode design featuring glassmorphism, glowing accents, and micro-animations.
-- **Visual Comparison Engine**: Compare up to 3 AI tools side-by-side using dynamic Radar, Bar, and Pie charts powered by Recharts.
-- **Trending AI**: Hot, curated list of the top-rated AI models every week.
-- **A-Z AI Categories**: Easily filter through 200+ AI tools across various categories (Coding, Chat, Automation, Healthcare, Video, etc.).
-- **Authentication System**: Full backend-powered login and signup functionality with JWTs and local storage integration.
-- **Profile Management**: Sleek user dashboard to manage account details.
-
----
-
-## 🏗️ Architecture
-
-The system uses a modern decoupled architecture. The Next.js frontend handles server-side routing and client-side visualization, while a FastAPI backend handles the REST endpoints and SQLite database operations.
-
-```mermaid
-graph TD
-    %% Frontend Node
-    subgraph Frontend [Client / UI]
-        UI[Next.js App Router]
-        AuthModals[Auth Components]
-        Charts[Recharts Visualization]
-        AuthModals -->|Stores JWT| LS[(Local Storage)]
-    end
-
-    %% API Layer
-    subgraph Backend [FastAPI Server]
-        API[REST API Router]
-        AuthService[JWT Auth Service]
-        ToolService[AI Tools Query Service]
-        API --> AuthService
-        API --> ToolService
-    end
-
-    %% Database
-    subgraph Database [SQLite DB]
-        DB[(aiuniverse.db)]
-        UsersTable[Users Table]
-        ToolsTable[Tools Data]
-        DB --- UsersTable
-        DB --- ToolsTable
-    end
-
-    %% Connections
-    UI -- "HTTP GET /tools" --> API
-    UI -- "HTTP POST /auth/login" --> API
-    AuthService -. "Hash & Verify" .-> DB
-    ToolService -. "SQL Query" .-> DB
-    
-    %% Styling
-    classDef frontend fill:#000000,stroke:#FF2D2D,stroke-width:2px,color:#fff;
-    classDef backend fill:#009688,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef database fill:#003B57,stroke:#fff,stroke-width:2px,color:#fff;
-    
-    class Frontend,UI,AuthModals,Charts frontend;
-    class Backend,API,AuthService,ToolService backend;
-    class Database,DB,UsersTable,ToolsTable database;
-```
-
----
-
-## 💻 Tech Stack
+## Tech Stack
 
 ### Frontend
-- **Framework**: Next.js (App Router)
-- **Library**: React 19
-- **Styling**: Vanilla CSS with custom glassmorphism and animated components
-- **Charting**: Recharts
-- **Icons**: Custom Emojis & UI Typography
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- GSAP
+- Three.js
+- Recharts
+- Lucide React
+- React Markdown
 
 ### Backend
-- **Framework**: FastAPI (Python)
-- **Server**: Uvicorn
-- **Database**: SQLite (SQLAlchemy ORM)
-- **Security**: Passlib (Bcrypt), python-jose (JWT)
 
----
+- FastAPI
+- Uvicorn
+- SQLAlchemy
+- SQLite
+- PyJWT
+- bcrypt
+- Groq SDK
+- python-dotenv
 
-## ⚙️ Getting Started
+## Repository Structure
 
-### 1. Start the Backend
-Navigate to the `backend` directory and install the requirements:
+```text
+AI-World/
+|-- ai-universe/          # Next.js frontend application
+|   |-- app/              # App Router pages and layouts
+|   |-- components/       # Reusable UI and animation components
+|   |-- public/           # Static assets
+|   |-- utils/            # API and auth helpers
+|   |-- package.json
+|   `-- railway.toml
+|-- backend/              # FastAPI backend application
+|   |-- main.py           # API entrypoint and tool routes
+|   |-- auth.py           # Signup, login, password hashing, JWT creation
+|   |-- database.py       # SQLAlchemy database setup
+|   |-- groq_service.py   # Groq-powered chat route
+|   |-- models.py         # Database models
+|   |-- tools_data.py     # Seed data for AI tools
+|   |-- requirements.txt
+|   `-- railway.toml
+|-- parse_tools.py        # Utility script for processing tool data
+`-- README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20 or later
+- npm
+- Python 3.11 or later
+- pip
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Godesivaramakrishna/AI-World-.git
+cd AI-World-
+```
+
+### 2. Configure Environment Variables
+
+Create `backend/.env`:
+
+```env
+JWT_SECRET=replace_with_a_long_random_secret
+DATABASE_URL=sqlite:///./aiuniverse.db
+GROQ_API_KEY=your_groq_api_key
+```
+
+Create `ai-universe/.env.local`:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+`GROQ_API_KEY` is optional for browsing and comparison features. Without it, the chat endpoint returns a configuration message.
+
+### 3. Run the Backend
+
 ```bash
 cd backend
-pip install fastapi uvicorn sqlalchemy passlib bcrypt python-jose pydantic python-multipart
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-Run the FastAPI server:
-```bash
-uvicorn main:app --reload --port 8000
-```
-*Note: On the first run, the backend will automatically seed the SQLite database with 200+ AI tools.*
 
-### 2. Start the Frontend
-Navigate to the `ai-universe` directory:
+The backend creates database tables on startup and seeds the tools table when it is empty.
+
+### 4. Run the Frontend
+
+Open a second terminal:
+
 ```bash
 cd ai-universe
 npm install
 npm run dev
 ```
-Access the application at `http://localhost:3000`.
 
----
+Open the application at:
 
-## 🎨 Design Philosophy
-AI Universe avoids the "generic corporate AI" feel. We focus on a sleek, aggressive design language with dark backgrounds (`#000000`), vibrant red accents (`#FF2D2D`), and smooth interactions that make the UI feel alive and responsive.
+```text
+http://localhost:3000
+```
+
+## Available Scripts
+
+Run frontend commands from `ai-universe/`:
+
+```bash
+npm run dev      # Start the local development server
+npm run build    # Create a production build
+npm run start    # Start the production server
+npm run lint     # Run ESLint
+```
+
+Run backend commands from `backend/`:
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+## API Reference
+
+Default local backend URL:
+
+```text
+http://localhost:8000
+```
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `GET` | `/tools` | Returns all AI tools |
+| `GET` | `/categories` | Returns category names and tool counts |
+| `GET` | `/tools/compare?ids=1,2,3` | Returns selected tools for comparison |
+| `POST` | `/auth/signup` | Registers a user and returns a JWT |
+| `POST` | `/auth/login` | Authenticates a user and returns a JWT |
+| `POST` | `/ai/chat` | Sends a prompt to the AI assistant |
+
+Example chat request:
+
+```bash
+curl -X POST http://localhost:8000/ai/chat \
+  -H "Content-Type: application/json" \
+  -d "{\"message\":\"Suggest the best AI tools for coding\"}"
+```
+
+## Deployment
+
+This repository is best deployed as two services: one for the backend and one for the frontend.
+
+### Backend on Railway
+
+Recommended settings:
+
+- Root directory: `backend`
+- Builder: Nixpacks
+- Start command: defined in `backend/railway.toml`
+
+Required variables:
+
+```env
+JWT_SECRET=replace_with_a_long_random_secret
+DATABASE_URL=sqlite:///./aiuniverse.db
+GROQ_API_KEY=your_groq_api_key
+```
+
+### Frontend on Railway
+
+Recommended settings:
+
+- Root directory: `ai-universe`
+- Builder: Nixpacks
+- Build and start commands: defined in `ai-universe/railway.toml`
+
+Required variable:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-backend-service.up.railway.app
+```
+
+## Production Notes
+
+- Replace the fallback JWT secret with a strong `JWT_SECRET`.
+- Restrict backend CORS origins to the deployed frontend URL.
+- Use persistent storage for SQLite, or migrate `DATABASE_URL` to a production database such as PostgreSQL.
+- Keep `NEXT_PUBLIC_API_URL` pointed at the deployed backend service.
+- Configure `GROQ_API_KEY` only in backend environment variables.
+- Run `npm run build` before deploying frontend changes.
+
+## License
+
+No license file is currently included. Add a license before publishing the project or accepting external contributions.
