@@ -1,0 +1,267 @@
+🤖  A–Z AI Tools Directory
+Complete Guide — Links, Free & Premium Plans
+
+  🟢 Free Tier Available        💰 Paid/Premium        🏢 Enterprise  
+
+🤖  Chat AI
+
+💻  Coding AI
+
+🎨  Image Generation AI
+
+🎬  Video Generation AI
+
+🎤  Voice AI
+
+🌐  Website Builder AI
+
+📱  App Builder AI
+
+⚡  Automation AI
+
+📊  Productivity AI
+
+📚  Education AI
+
+🧠  Research AI
+
+🎵  Music AI
+
+📈  Marketing AI
+
+🛒  Ecommerce AI
+
+🔒  Cybersecurity AI
+
+☁️  Cloud & DevOps AI
+
+🎮  Game Development AI
+
+🧬  Healthcare AI
+
+📄  Resume & Career AI
+
+📹  Meeting Assistant AI
+
+
+✅ Prices accurate as of 2024-2025 — verify on official websites before subscribing
+Tool Name & Link | Pricing | Plan Types | Key Features
+ChatGPTChatGPT | Free / Plus $20/mo / Team $30/mo | 🟢 Free 💰 Premium | GPT-4o, image gen, plugins, voice
+ClaudeClaude | Free / Pro $20/mo / Team $30/mo | 🟢 Free 💰 Premium | Long context, coding, analysis, vision
+GeminiGemini | Free / Advanced $19.99/mo | 🟢 Free 💰 Premium | Google integration, multimodal
+Copilot (Microsoft)Copilot (Microsoft) | Free / Pro $20/mo | 🟢 Free 💰 Premium | Bing search + GPT-4, Office integration
+Meta AIMeta AI | Free | 🟢 Free | Integrated in Facebook, Instagram, WhatsApp
+Perplexity AIPerplexity AI | Free / Pro $20/mo | 🟢 Free 💰 Premium | Real-time web search + AI answers
+You.comYou.com | Free / Pro $20/mo | 🟢 Free 💰 Premium | Search + chat + code + image generation
+Pi (Inflection AI)Pi (Inflection AI) | Free | 🟢 Free | Personal AI companion, conversational
+HuggingChatHuggingChat | Free (Open Source) | 🟢 Free | Open-source models, free to use
+Poe by QuoraPoe by Quora | Free / $19.99/mo | 🟢 Free 💰 Premium | Access multiple AI models in one place
+Tool Name & Link | Pricing | Plan Types | Key Features
+GitHub CopilotGitHub Copilot | Free (limited) / $10/mo / Business $19/mo | 🟢 Free 💰 Premium | VS Code, JetBrains, Neovim integration
+CursorCursor | Free / Pro $20/mo / Business $40/mo | 🟢 Free 💰 Premium | AI-first code editor, codebase chat
+Replit AIReplit AI | Free / Core $20/mo | 🟢 Free 💰 Premium | Online IDE with AI, run & deploy code
+TabnineTabnine | Free / Pro $12/mo / Enterprise | 🟢 Free 🏢 Enterprise | Code completion, privacy-focused
+CodeiumCodeium | Free / Teams $12/mo | 🟢 Free 💰 Premium | Fast AI autocomplete, 70+ languages
+Amazon CodeWhispererAmazon CodeWhisperer | Free (Individual) / Professional $19/mo | 🟢 Free 💰 Premium | AWS integration, security scanning
+Sourcegraph CodySourcegraph Cody | Free / Pro $9/mo / Enterprise | 🟢 Free 🏢 Enterprise | Codebase-aware AI assistant
+Warp AIWarp AI | Free / Team $22/mo | 🟢 Free 💰 Premium | AI-powered terminal
+Pieces for DevelopersPieces for Developers | Free / Pro $10/mo | 🟢 Free 💰 Premium | Code snippet manager + AI assistant
+v0 by Vercelv0 by Vercel | Free (credits) / Premium $20/mo | 🟢 Free 💰 Premium | Generate UI components from text
+Tool Name & Link | Pricing | Plan Types | Key Features
+MidjourneyMidjourney | Basic $10/mo / Standard $30/mo / Pro $60/mo | 💰 Paid | Highest quality art generation, Discord-based
+DALL-E 3 (OpenAI)DALL-E 3 (OpenAI) | Included in ChatGPT Plus | 💰 Paid | Photorealistic, integrated in ChatGPT
+Stable Diffusion (Stability AI)Stable Diffusion (Stability AI) | Free (local) / API paid | 🟢 Free | Open-source, run locally or via API
+Adobe FireflyAdobe Firefly | Free (25 credits) / Premium with CC | 🟢 Free | Safe for commercial use, Adobe integration
+Canva AI (Magic Media)Canva AI (Magic Media) | Free / Pro $12.99/mo | 🟢 Free 💰 Premium | Text-to-image inside Canva designs
+IdeogramIdeogram | Free / Basic $7/mo / Plus $16/mo | 🟢 Free 💰 Premium | Best for text in images, typography
+Leonardo AILeonardo AI | Free (150 tokens/day) / Apprentice $10/mo | 🟢 Free 💰 Premium | Game assets, concept art, fine-tuned models
+Bing Image CreatorBing Image Creator | Free (with Microsoft account) | 🟢 Free | Powered by DALL-E 3, free to use
+Playground AIPlayground AI | Free (500 images/day) / Pro $15/mo | 🟢 Free 💰 Premium | Mix of styles, canvas editing
+NightCafeNightCafe | Free (credits) / various plans | 🟢 Free | Multiple algorithms, NFT export
+Tool Name & Link | Pricing | Plan Types | Key Features
+Sora (OpenAI)Sora (OpenAI) | ChatGPT Plus/Pro required | 💰 Paid | 1080p video up to 20 seconds from text
+Runway MLRunway ML | Free (125 credits) / Standard $15/mo / Pro $35/mo | 🟢 Free 💰 Premium | Gen-3, image-to-video, video editing
+Pika LabsPika Labs | Free / Standard $8/mo / Unlimited $28/mo | 🟢 Free 💰 Premium | Text/image to video, lip sync
+Kling AIKling AI | Free (limited) / Standard $10/mo / Pro $35/mo | 🟢 Free 💰 Premium | Realistic motion, 2-min videos
+Luma Dream MachineLuma Dream Machine | Free (30 gen/mo) / Plus $29.99/mo | 🟢 Free 💰 Premium | Smooth realistic video from text/image
+HeyGenHeyGen | Free (1 min) / Creator $29/mo | 🟢 Free 💰 Premium | AI avatars, video translation, lip sync
+SynthesiaSynthesia | Starter $29/mo / Creator $89/mo | 💰 Paid | Professional AI avatar videos, 130+ avatars
+Invideo AIInvideo AI | Free / Plus $25/mo / Max $60/mo | 🟢 Free 💰 Premium | Text to video, auto voiceover, templates
+Pictory AIPictory AI | Starter $23/mo / Professional $47/mo | 💰 Paid | Blog/script to video, auto subtitles
+Veed.ioVeed.io | Free / Basic $18/mo / Pro $30/mo | 🟢 Free 💰 Premium | AI video editor, subtitles, translation
+Tool Name & Link | Pricing | Plan Types | Key Features
+ElevenLabsElevenLabs | Free (10k chars) / Starter $5/mo / Creator $22/mo | 🟢 Free 💰 Premium | Most realistic voice cloning & TTS
+Murf AIMurf AI | Free / Creator $29/mo / Business $99/mo | 🟢 Free 💰 Premium | 120+ voices, studio-quality voiceovers
+Play.htPlay.ht | Free / Creator $31.2/mo / Unlimited $49/mo | 🟢 Free 💰 Premium | Voice cloning, 900+ voices, 142 languages
+Resemble AIResemble AI | Free (trial) / Basic $29/mo | 🟢 Free 💰 Premium | Real-time voice cloning, emotion control
+SpeechifySpeechify | Free / Premium $139/yr | 🟢 Free 💰 Premium | Text-to-speech for reading, 30+ languages
+LOVO AI (Genny)LOVO AI (Genny) | Free / Basic $19/mo / Pro $39/mo | 🟢 Free 💰 Premium | 500+ voices, AI writer + voice combo
+Replica StudiosReplica Studios | Free (30 min) / Indie $24/mo | 🟢 Free 💰 Premium | Game & film voice acting AI
+Wellsaid LabsWellsaid Labs | Teams $50/mo (estimated) | 💰 Paid | Enterprise text-to-speech, brand voices
+TypecastTypecast | Free / Plus $15/mo / Pro $30/mo | 🟢 Free 💰 Premium | AI actor voices, video+voice combo
+Coqui TTSCoqui TTS | Free (open source) | 🟢 Free | Open-source voice cloning, self-hostable
+Tool Name & Link | Pricing | Plan Types | Key Features
+Wix ADIWix ADI | Free / Premium from $17/mo | 🟢 Free 💰 Premium | Auto-generates full website from answers
+Framer AIFramer AI | Free / Mini $5/mo / Basic $15/mo | 🟢 Free 💰 Premium | AI site generation, CMS, animations
+10Web10Web | Personal $10/mo / Premium $24/mo | 💰 Paid | WordPress AI builder, page speed 90+
+DurableDurable | Free (trial) / Starter $12/mo / Business $20/mo | 🟢 Free 💰 Premium | 30-second AI website builder
+Hostinger Website BuilderHostinger Website Builder | Premium $2.99/mo (incl. hosting) | 💰 Paid | AI-powered drag-drop with free domain
+GoDaddy AiroGoDaddy Airo | Free / plans from $9.99/mo | 🟢 Free 💰 Premium | AI builds site + logo + content
+Webflow AIWebflow AI | Free / Basic $18/mo / CMS $29/mo | 🟢 Free 💰 Premium | AI copywriting + pro web design tool
+MixoMixo | Starter $9/mo / Growth $19/mo | 💰 Paid | Launch landing page in 30 seconds
+Zyro (Hostinger)Zyro (Hostinger) | Basic from $2.61/mo | 💰 Paid | AI writer + heatmap + logo tools
+Jimdo DolphinJimdo Dolphin | Free / Start €9/mo / Grow €15/mo | 🟢 Free 💰 Premium | AI interview-based website creation
+Tool Name & Link | Pricing | Plan Types | Key Features
+BubbleBubble | Free / Starter $32/mo / Growth $134/mo | 🟢 Free 💰 Premium | No-code app builder, very powerful
+AdaloAdalo | Free / Starter $45/mo | 🟢 Free 💰 Premium | Native mobile app builder, no-code
+GlideGlide | Free / Maker $49/mo / Business $149/mo | 🟢 Free 💰 Premium | Google Sheets to app in minutes
+AppMasterAppMaster | Free / Starter $65/mo / Business $165/mo | 🟢 Free 💰 Premium | Backend + web + mobile AI app builder
+ThunkableThunkable | Free / Pro $13/mo / Team $50/mo | 🟢 Free 💰 Premium | Drag-drop mobile app builder
+BuildFireBuildFire | Starter $19/mo / Growth $59/mo | 💰 Paid | Simple mobile app platform
+FlutterFlowFlutterFlow | Free / Standard $30/mo / Pro $70/mo | 🟢 Free 💰 Premium | Flutter-based app builder, exports code
+DraftbitDraftbit | Free / Team $49/mo / Pro $99/mo | 🟢 Free 💰 Premium | React Native app builder, real code
+Bravo StudioBravo Studio | Free / Pro €19/mo / Business €59/mo | 🟢 Free 💰 Premium | Figma design to native app
+SoftrSoftr | Free / Basic $49/mo / Professional $135/mo | 🟢 Free 💰 Premium | Airtable/Google Sheets to web app
+Tool Name & Link | Pricing | Plan Types | Key Features
+Zapier AIZapier AI | Free (100 tasks/mo) / Starter $29.99/mo / Professional $73.50/mo | 🟢 Free 💰 Premium | 5000+ app integrations, AI automation builder
+Make (Integromat)Make (Integromat) | Free (1000 ops) / Core $10.59/mo / Pro $18.82/mo | 🟢 Free 💰 Premium | Visual workflow builder, complex automations
+n8nn8n | Free (self-hosted) / Cloud $20/mo / Pro $50/mo | 🟢 Free 💰 Premium | Open-source, self-hostable automation
+ActivepiecesActivepieces | Free / Platform $1200/yr | 🟢 Free 💰 Premium | Open-source Zapier alternative
+IFTTTIFTTT | Free / Pro $3.33/mo / Pro+ $12.50/mo | 🟢 Free 💰 Premium | Simple if-this-then-that automations
+BardeenBardeen | Free / Power $10/mo / Business $15/mo | 🟢 Free 💰 Premium | Browser automation, scraping, AI actions
+Lindy AILindy AI | Free / Standard $49.99/mo | 🟢 Free 💰 Premium | AI employees that automate tasks
+Relay.appRelay.app | Free / Starter $9/mo / Team $49/mo | 🟢 Free 💰 Premium | Human-in-the-loop automation
+WorkatoWorkato | Enterprise pricing (custom) | 🏢 Enterprise | Enterprise-grade iPaaS automation
+PipedreamPipedream | Free / Basic $29/mo / Advanced $79/mo | 🟢 Free 💰 Premium | Code + no-code automation, 1000+ APIs
+Tool Name & Link | Pricing | Plan Types | Key Features
+Notion AINotion AI | Free (limited) / AI add-on $10/mo | 🟢 Free 💰 Premium | Writing, summarizing, databases in Notion
+Microsoft 365 CopilotMicrosoft 365 Copilot | Business plans from $30/user/mo | 💰 Paid | Word, Excel, PowerPoint, Teams AI
+Google Duet AI / Gemini for WorkspaceGoogle Duet AI / Gemini for Workspace | Business Starter $6/mo + AI add-on $30/mo | 💰 Paid | Docs, Sheets, Gmail, Meet AI
+Otter.aiOtter.ai | Free / Pro $16.99/mo / Business $30/mo | 🟢 Free 💰 Premium | Meeting transcription + AI summaries
+Todoist AITodoist AI | Free / Pro $4/mo / Business $6/mo | 🟢 Free 💰 Premium | AI task suggestions, smart scheduling
+MotionMotion | Individual $19/mo / Team $12/mo/user | 💰 Paid | AI calendar + task scheduler
+Reclaim AIReclaim AI | Free / Starter $10/mo / Business $15/mo | 🟢 Free 💰 Premium | Smart calendar blocking, habit scheduling
+Mem AIMem AI | Free / Pro $14.99/mo | 🟢 Free 💰 Premium | AI note-taking, auto-organizes notes
+CleoCleo | Free / Cleo Plus $5.99/mo | 🟢 Free 💰 Premium | AI financial assistant + budgeting
+Jasper AIJasper AI | Creator $49/mo / Teams $125/mo | 💰 Paid | AI writing for marketing + content
+Tool Name & Link | Pricing | Plan Types | Key Features
+Khan Academy KhanmigoKhan Academy Khanmigo | Free (Khanmigo limited) / Khanmigo $44/yr | 🟢 Free 💰 Premium | AI tutor for students and teachers
+Socratic by GoogleSocratic by Google | Free | 🟢 Free | Homework help via photo scan, all subjects
+Duolingo MaxDuolingo Max | Free / Super $12.99/mo / Max $29.99/mo | 🟢 Free 💰 Premium | AI language learning, roleplay conversations
+Quizlet AIQuizlet AI | Free / Plus $7.99/mo | 🟢 Free 💰 Premium | AI flashcards, study plans, practice tests
+Coursera AI TutorCoursera AI Tutor | Free (audit) / Plus $59/mo | 🟢 Free 💰 Premium | AI tutor inside online university courses
+PhotomathPhotomath | Free / Plus $9.99/mo / Teacher $19.99/mo | 🟢 Free 💰 Premium | Scan math problems, step-by-step solutions
+GrammarlyGrammarly | Free / Premium $12/mo / Business $15/mo | 🟢 Free 💰 Premium | Writing assistant, grammar, tone, clarity
+QuillBotQuillBot | Free / Premium $8.33/mo | 🟢 Free 💰 Premium | Paraphrasing, summarizing, grammar check
+ElicitElicit | Free (5000 credits) / Plus $10/mo | 🟢 Free 💰 Premium | AI research assistant, literature review
+Wolfram AlphaWolfram Alpha | Free / Pro $7.25/mo / Pro Premium $12/mo | 🟢 Free 💰 Premium | Computational knowledge, STEM answers
+Tool Name & Link | Pricing | Plan Types | Key Features
+Perplexity AI ProPerplexity AI Pro | Free / Pro $20/mo | 🟢 Free 💰 Premium | Real-time research with citations
+ConsensusConsensus | Free (limited) / Premium $11.99/mo | 🟢 Free 💰 Premium | Search 200M+ research papers with AI
+Semantic ScholarSemantic Scholar | Free | 🟢 Free | AI-powered academic search engine
+ElicitElicit | Free / Plus $10/mo | 🟢 Free 💰 Premium | Extract data from papers, literature reviews
+Scite.aiScite.ai | Free (limited) / Individual $20/mo | 🟢 Free 💰 Premium | Citation analysis, fact-checking papers
+ResearchRabbitResearchRabbit | Free | 🟢 Free | Visual research paper discovery tool
+Connected PapersConnected Papers | Free (5/mo) / Academic $3/mo | 🟢 Free 💰 Premium | Visual graph of related research papers
+Iris.aiIris.ai | Free (trial) / Professional $29/mo | 🟢 Free 💰 Premium | Research workspace, paper analysis
+ScholarcyScholarcy | Free / Personal $9.99/mo / Premium $12.99/mo | 🟢 Free 💰 Premium | Auto-summarize research papers
+ExplainpaperExplainpaper | Free / Plus $12/mo | 🟢 Free 💰 Premium | Upload paper, AI explains complex parts
+Tool Name & Link | Pricing | Plan Types | Key Features
+Suno AISuno AI | Free (50 credits/day) / Pro $10/mo / Premier $30/mo | 🟢 Free 💰 Premium | Full song generation with vocals from text
+UdioUdio | Free (1200 credits/mo) / Standard $10/mo / Pro $30/mo | 🟢 Free 💰 Premium | High-quality music + lyrics from text
+MubertMubert | Free / Ambassador $14/mo / Artist $39/mo | 🟢 Free 💰 Premium | Royalty-free AI music for content creators
+AIVAAIVA | Free (3 downloads) / Standard €11/mo / Pro €33/mo | 🟢 Free 💰 Premium | AI classical/cinematic music composer
+SoundrawSoundraw | Creator $16.99/mo / Artist $29.99/mo | 💰 Paid | Customize AI-generated royalty-free music
+BoomyBoomy | Free / Personal $9.99/mo / Pro $29.99/mo | 🟢 Free 💰 Premium | Create songs in seconds, publish to Spotify
+LoudlyLoudly | Free / Standard $9.99/mo | 🟢 Free 💰 Premium | AI music + stem separation + remixing
+Beatoven.aiBeatoven.ai | Free (15 min) / Pro $11.10/mo | 🟢 Free 💰 Premium | Mood-based background music for videos
+SplashSplash | Free / Pro $9.99/mo | 🟢 Free 💰 Premium | Rap and beat generation AI tool
+RiffusionRiffusion | Free (open source) | 🟢 Free | Stable diffusion for music, real-time generation
+Tool Name & Link | Pricing | Plan Types | Key Features
+Jasper AIJasper AI | Creator $49/mo / Teams $125/mo / Business custom | 🏢 Enterprise | Long-form marketing content, brand voice
+Copy.aiCopy.ai | Free / Pro $49/mo / Team $249/mo | 🟢 Free 💰 Premium | AI copywriting, 90+ templates
+WritesonicWritesonic | Free (10k words) / Individual $16/mo / Teams $30/mo | 🟢 Free 💰 Premium | Blog posts, ads, product descriptions
+Semrush AISemrush AI | Pro $139.95/mo / Guru $249.95/mo | 💰 Paid | SEO + content marketing + competitor analysis
+Surfer SEOSurfer SEO | Essential $89/mo / Scale $129/mo | 💰 Paid | AI content optimization for SEO rankings
+AdCreative.aiAdCreative.ai | Starter $21/mo / Professional $141/mo | 💰 Paid | AI-generated ad creatives, A/B testing
+PhraseePhrasee | Enterprise pricing | 🏢 Enterprise | AI marketing language optimization
+PersadoPersado | Enterprise pricing | 🏢 Enterprise | AI emotional language for marketing
+Mailchimp AIMailchimp AI | Free / Essentials $13/mo / Standard $20/mo | 🟢 Free 💰 Premium | AI email subject lines, send time, content
+HubSpot AIHubSpot AI | Free CRM / Starter $20/mo / Pro $890/mo | 🟢 Free 💰 Premium | AI across CRM, marketing, sales, service
+Tool Name & Link | Pricing | Plan Types | Key Features
+Shopify MagicShopify Magic | Basic $39/mo / Shopify $105/mo / Advanced $399/mo | 💰 Paid | AI product descriptions, image editing, analytics
+BigCommerce AIBigCommerce AI | Standard $39/mo / Plus $105/mo / Pro $399/mo | 💰 Paid | AI-powered merchandising + content
+Tidio AI (Lyro)Tidio AI (Lyro) | Free / Starter $29/mo / Growth $59/mo | 🟢 Free 💰 Premium | AI chatbot for customer support + sales
+Octane AIOctane AI | Octane $50/mo / Pro $200/mo | 💰 Paid | Shopify quiz funnels + personalization AI
+VisenzeVisenze | Enterprise pricing | 🏢 Enterprise | Visual search + AI product recommendations
+Clerk.ioClerk.io | Starter €69/mo / Pro €199/mo | 💰 Paid | AI product recommendations for ecommerce
+Vue.aiVue.ai | Enterprise pricing | 🏢 Enterprise | Retail AI: tagging, recommendations, styling
+SearchieSearchie | Basic $97/mo / Pro $197/mo | 💰 Paid | AI-powered content hub for course creators
+RecombeeRecombee | Free (tier) / Starter $49/mo / Business custom | 🟢 Free 🏢 Enterprise | AI recommendation engine for ecommerce
+ChatBot by LiveChatChatBot by LiveChat | Starter $52/mo / Team $142/mo | 💰 Paid | AI chatbot for sales + support automation
+Tool Name & Link | Pricing | Plan Types | Key Features
+DarktraceDarktrace | Enterprise pricing | 🏢 Enterprise | AI threat detection, autonomous response
+CrowdStrike FalconCrowdStrike Falcon | Falcon Go $299.99/yr / Pro/Enterprise custom | 🏢 Enterprise | AI endpoint detection and response (EDR)
+SentinelOneSentinelOne | Singularity Core $69.99/endpoint/yr | 💰 Paid | Autonomous AI cybersecurity platform
+Vectra AIVectra AI | Enterprise pricing | 🏢 Enterprise | AI network detection and response (NDR)
+CybereasonCybereason | Enterprise pricing | 🏢 Enterprise | AI-powered XDR platform
+Recorded FutureRecorded Future | Enterprise pricing | 🏢 Enterprise | AI threat intelligence platform
+VirusTotalVirusTotal | Free / Premium $10,200/yr | 🟢 Free 💰 Premium | AI-powered malware scanning + analysis
+SnykSnyk | Free / Team $25/mo / Business $67/mo | 🟢 Free 💰 Premium | AI code security, finds vulnerabilities
+Palo Alto Cortex XSOARPalo Alto Cortex XSOAR | Enterprise pricing | 🏢 Enterprise | AI security orchestration and response
+IBM QRadarIBM QRadar | Enterprise pricing | 🏢 Enterprise | AI SIEM + threat intelligence
+Tool Name & Link | Pricing | Plan Types | Key Features
+AWS CodeGuruAWS CodeGuru | Pay-per-use (~$0.50/100 lines analyzed) | 💰 Paid | AI code reviews + performance profiling
+Google Cloud AI PlatformGoogle Cloud AI Platform | Pay-as-you-go | 💰 Paid | Vertex AI, AutoML, MLOps on GCP
+Azure AI ServicesAzure AI Services | Pay-as-you-go | 💰 Paid | Vision, speech, language, decision APIs
+Harness AIHarness AI | Free / Team $25/mo / Business $100/mo | 🟢 Free 💰 Premium | AI-powered CI/CD, feature flags, chaos eng.
+Datadog AIDatadog AI | Free / Pro $15/host/mo / Enterprise $23/host/mo | 🟢 Free 🏢 Enterprise | AI anomaly detection, observability
+New Relic AINew Relic AI | Free (100GB/mo) / Standard $49/user/mo | 🟢 Free 💰 Premium | AI-powered full-stack observability
+DynatraceDynatrace | Infra Monitoring $0.04/hr | 💰 Paid | AI-driven observability + AIOps
+PagerDuty AIPagerDuty AI | Free / Professional $21/user/mo | 🟢 Free 💰 Premium | AIOps, intelligent alert grouping
+MoogsoftMoogsoft | Enterprise pricing | 🏢 Enterprise | AIOps noise reduction + incident correlation
+Pulumi AIPulumi AI | Free / Team $50/mo / Enterprise custom | 🟢 Free 🏢 Enterprise | AI infrastructure-as-code generation
+Tool Name & Link | Pricing | Plan Types | Key Features
+Unity MuseUnity Muse | $30/mo / included in Unity Pro | 💰 Paid | AI sprite gen, animation, chat in Unity editor
+Scenario.ggScenario.gg | Free (100 credits) / Starter $15/mo / Explorer $50/mo | 🟢 Free 💰 Premium | AI game asset generator, consistent art style
+Ludo AILudo AI | Free (limited) / Indie $14.99/mo / Studio $119/mo | 🟢 Free 💰 Premium | Game concept ideation + market analysis AI
+Promethean AIPromethean AI | Free (limited) / Pro $15/mo | 🟢 Free 💰 Premium | AI world-building assistant for 3D scenes
+Inworld AIInworld AI | Free (limited) / Custom pricing | 🟢 Free 🏢 Enterprise | AI characters / NPCs with personality + memory
+ConvaiConvai | Free / Pro $25/mo / Business custom | 🟢 Free 🏢 Enterprise | Conversational AI for game NPCs
+Leonardo AI (Game Assets)Leonardo AI (Game Assets) | Free (150 tokens/day) / Apprentice $10/mo | 🟢 Free 💰 Premium | AI concept art and game texture generation
+Meshy AIMeshy AI | Free (200 credits) / Pro $20/mo | 🟢 Free 💰 Premium | Text/image to 3D model generation
+KaedimKaedim | Custom pricing | 🏢 Enterprise | Convert 2D art to 3D models for games
+DidimoDidimo | Free (trial) / Standard €299/mo | 🟢 Free 💰 Premium | Photorealistic AI avatar generation for games
+Tool Name & Link | Pricing | Plan Types | Key Features
+IBM Watson HealthIBM Watson Health | Enterprise pricing | 🏢 Enterprise | Clinical decision support, data analytics
+Tempus AITempus AI | B2B / institutional pricing | 💰 Paid | AI genomics + precision medicine
+Babylon HealthBabylon Health | B2B / NHS integrated | 💰 Paid | AI symptom checker + virtual consultations
+Ada HealthAda Health | Free (app) / API B2B pricing | 🟢 Free | AI medical symptom assessment app
+Viz.aiViz.ai | Hospital/enterprise pricing | 🏢 Enterprise | AI stroke & cardiac detection from CT scans
+EnliticEnlitic | Enterprise pricing | 🏢 Enterprise | AI radiology: X-ray, CT, MRI analysis
+AidocAidoc | Hospital pricing | 💰 Paid | AI radiology workflow, 20+ conditions detected
+InfermedicaInfermedica | API pricing / custom | 🏢 Enterprise | AI triage, symptom checker API
+DeepScribeDeepScribe | Custom physician pricing | 🏢 Enterprise | AI medical documentation from conversations
+Nuance Dragon MedicalNuance Dragon Medical | Enterprise / per-physician pricing | 🏢 Enterprise | AI medical speech recognition, note-taking
+Tool Name & Link | Pricing | Plan Types | Key Features
+Resume.ioResume.io | Free / Premium $2.95/wk or $44.95/yr | 🟢 Free 💰 Premium | AI resume builder, ATS-optimized templates
+KickresumeKickresume | Free / Premium $19/mo | 🟢 Free 💰 Premium | AI resume + cover letter + website builder
+EnhancvEnhancv | Free / Monthly $24.99 / Quarterly $14.99/mo | 🟢 Free 💰 Premium | AI resume builder + career coaching
+Rezi AIRezi AI | Free / Pro $29/mo | 🟢 Free 💰 Premium | ATS-optimized AI resume builder
+Teal HQTeal HQ | Free / Pro $29/mo | 🟢 Free 💰 Premium | Job tracker + AI resume tailoring
+JobscanJobscan | Free (limited) / Premium $49.95/mo | 🟢 Free 💰 Premium | Resume-to-job description ATS match score
+LinkedIn AILinkedIn AI | Free / Premium $39.99/mo | 🟢 Free 💰 Premium | AI profile optimization, job suggestions
+SkillSyncerSkillSyncer | Free (3/mo) / Basic $11.95/mo | 🟢 Free 💰 Premium | AI resume keyword optimization
+Interview Warmup (Google)Interview Warmup (Google) | Free | 🟢 Free | AI mock interview practice by Google
+YoodliYoodli | Free / Individual $25/mo / Team $100/mo | 🟢 Free 💰 Premium | AI communication coach, interview practice
+Tool Name & Link | Pricing | Plan Types | Key Features
+Otter.aiOtter.ai | Free / Pro $16.99/mo / Business $30/mo | 🟢 Free 💰 Premium | Live transcription + AI meeting summaries
+Fireflies.aiFireflies.ai | Free / Pro $18/mo / Business $29/mo | 🟢 Free 💰 Premium | Record, transcribe, search all meetings
+FathomFathom | Free / Premium $19/mo / Team $29/mo | 🟢 Free 💰 Premium | Zoom/Meet/Teams AI notetaker, highlights
+Notion AI Meeting NotesNotion AI Meeting Notes | AI add-on $10/mo | 💰 Paid | Transcribe + summarize into Notion pages
+Zoom AI CompanionZoom AI Companion | Included in paid Zoom plans from $14.99/mo | 💰 Paid | Real-time AI summaries, chat compose
+Microsoft Copilot for TeamsMicrosoft Copilot for Teams | Microsoft 365 Copilot $30/user/mo | 💰 Paid | AI meeting recap, action items, insights
+Sembly AISembly AI | Free / Professional $15/mo / Team $20/mo | 🟢 Free 💰 Premium | Meeting transcription + smart topics + tasks
+tl;dvtl;dv | Free / Pro €18/mo / Business €59/mo | 🟢 Free 💰 Premium | Record + clip meetings, AI highlights
+GrainGrain | Free / Starter $19/mo / Business $39/mo | 🟢 Free 💰 Premium | Meeting recording + AI coaching insights
+AvomaAvoma | Starter $19/mo / Plus $49/mo / Business $79/mo | 💰 Paid | AI meeting assistant + revenue intelligence

@@ -1,0 +1,9 @@
+⚠ Port 3000 is in use by process 8696, using available port 3001 instead.
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          8696
+- Dir:          C:\Users\goder\OneDrive\Desktop\AI-World\ai-universe
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 8696 /F to stop it.
