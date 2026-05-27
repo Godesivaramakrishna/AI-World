@@ -1,6 +1,5 @@
 'use client';
-
-import { useEffect, useRef, useCallback, CSSProperties } from 'react';
+import { useEffect, useRef, CSSProperties } from 'react';
 
 interface FrameCanvasProps {
   framesDir: string;
@@ -15,7 +14,7 @@ interface FrameCanvasProps {
 export default function FrameCanvas({
   framesDir,
   frameCount,
-  fps = 30,
+  fps = 15,
   className = '',
   width = 800,
   height = 600,
@@ -24,63 +23,84 @@ export default function FrameCanvas({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const framesRef = useRef<HTMLImageElement[]>([]);
   const currentFrameRef = useRef(0);
-  const lastTimeRef = useRef(0);
-  const rafRef = useRef<number>(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const loadedCountRef = useRef(0);
 
-  const padNum = (n: number) => String(n).padStart(4, '0');
-
-  const preloadFrames = useCallback(async () => {
-    const images: HTMLImageElement[] = new Array(frameCount);
-    const interval = 1000 / fps;
-
-    const loadPromises = Array.from({ length: frameCount }, (_, i) => {
-      return new Promise<void>((resolve) => {
-        const img = new Image();
-        img.src = `/${framesDir}/frame_${padNum(i + 1)}.webp`;
-        img.onload = () => { images[i] = img; resolve(); };
-        img.onerror = () => { images[i] = img; resolve(); };
-      });
-    });
-
-    await Promise.all(loadPromises);
-    framesRef.current = images;
-
+  useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Draw first frame immediately
-    const first = images[0];
-    if (first?.naturalWidth > 0) ctx.drawImage(first, 0, 0, canvas.width, canvas.height);
+    const images: HTMLImageElement[] = [];
+    loadedCountRef.current = 0;
+    currentFrameRef.current = 0;
 
-    const animate = (timestamp: number) => {
-      if (timestamp - lastTimeRef.current >= interval) {
-        lastTimeRef.current = timestamp;
-        const frame = framesRef.current[currentFrameRef.current];
-        if (frame?.naturalWidth > 0) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
+    function drawFrame(index: number) {
+      const img = images[index];
+      if (!img || !canvas) return;
+      ctx!.clearRect(0, 0, canvas.width, canvas.height);
+      ctx!.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+
+    function startLoop() {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      const ms = Math.round(1000 / fps);
+      intervalRef.current = setInterval(() => {
+        currentFrameRef.current =
+          (currentFrameRef.current + 1) % images.length;
+        drawFrame(currentFrameRef.current);
+      }, ms);
+    }
+
+    for (let i = 1; i <= frameCount; i++) {
+      const num = String(i).padStart(4, '0');
+      const src = `/${framesDir}/frame_${num}.webp`;
+      const img = new Image();
+
+      img.onload = () => {
+        images[i - 1] = img;
+        loadedCountRef.current += 1;
+        if (loadedCountRef.current === 1) {
+          drawFrame(0);
         }
-        currentFrameRef.current = (currentFrameRef.current + 1) % frameCount;
+        if (loadedCountRef.current === frameCount) {
+          framesRef.current = images;
+          startLoop();
+        }
+      };
+
+      img.onerror = () => {
+        loadedCountRef.current += 1;
+        if (loadedCountRef.current === frameCount) {
+          framesRef.current = images;
+          startLoop();
+        }
+      };
+
+      img.src = src;
+    }
+
+    function handleVisibility() {
+      if (document.hidden) {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      } else {
+        if (!intervalRef.current && framesRef.current.length > 0) {
+          startLoop();
+        }
       }
-      rafRef.current = requestAnimationFrame(animate);
+    }
+
+    document.addEventListener('visibilitychange', handleVisibility);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      document.removeEventListener('visibilitychange', handleVisibility);
     };
-
-    rafRef.current = requestAnimationFrame(animate);
   }, [framesDir, frameCount, fps]);
-
-  useEffect(() => {
-    preloadFrames();
-    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
-  }, [preloadFrames]);
-
-  const defaultStyle: CSSProperties = {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    display: 'block',
-  };
 
   return (
     <canvas
@@ -88,7 +108,7 @@ export default function FrameCanvas({
       width={width}
       height={height}
       className={className}
-      style={{ ...defaultStyle, ...style }}
+      style={{ display: 'block', ...style }}
     />
   );
 }
